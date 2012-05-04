@@ -11,8 +11,6 @@ HR=\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\
 
 build:
 	@echo "Building Bootstrap..."
-	@jshint js/*.js --config js/.jshintrc
-	@jshint js/tests/unit/*.js --config js/.jshintrc
 	@recess --compile ${BOOTSTRAP_LESS} > ${BOOTSTRAP}
 	@echo "Bootstrap successfully built at ${DATE}."
 
