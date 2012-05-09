@@ -54,7 +54,7 @@ textarea {
 // Identify controls by their labels
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.4em;
   color: @grayDark;
 }
 
@@ -64,10 +64,9 @@ textarea,
 select,
 .uneditable-input {
   display: inline-block;
-  width: 210px;
   height: @baseLineHeight;
-  padding: 4px;
-  margin-bottom: 9px;
+  padding: 0.35em;
+  margin-bottom: 0.75em;
   font-size: 1em;
   line-height: @baseLineHeight;
   color: @gray;
@@ -94,7 +93,7 @@ input[type="radio"] {
   width: auto;
   height: auto;
   padding: 0;
-  margin: 3px 0;
+  margin: 0.3em 0;
   *margin-top: 0; /* IE7 */
   line-height: normal;
   cursor: pointer;
@@ -128,19 +127,18 @@ input[type="submit"] {
 // Set the height of select and file controls to match text inputs
 select,
 input[type="file"] {
-  height: 28px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
-  *margin-top: 4px; /* For IE7, add top margin to align select with labels */
-  line-height: 28px;
+  height: 2.2em; /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  *margin-top: 0.35em; /* For IE7, add top margin to align select with labels */
+  line-height: 2.2em;
 }
 
 // Reset line-height for IE
 input[type="file"] {
-  line-height: 18px \9;
+  line-height: 1.4em \9;
 }
 
 // Chrome on Linux and Mobile Safari need background-color
 select {
-  width: 220px; // default input width + 10px of padding that doesn't get applied
   background-color: @inputBackground;
 }
 
@@ -173,19 +171,19 @@ input[type="hidden"] {
 // Indent the labels to position radios/checkboxes as hanging
 .radio,
 .checkbox {
-  min-height: 18px; // clear the floating input if there is no label text
-  padding-left: 18px;
+  min-height: 1.45em; // clear the floating input if there is no label text
+  padding-left: 1.45em;
 }
 .radio input[type="radio"],
 .checkbox input[type="checkbox"] {
   float: left;
-  margin-left: -18px;
+  margin-left: -1.45em;
 }
 
 // Move the options list down to align with labels
 .controls > .radio:first-child,
 .controls > .checkbox:first-child {
-  padding-top: 5px; // has to be padding because margin collaspes
+  padding-top: 0.45em; // has to be padding because margin collaspes
 }
 
 // Radios and checkboxes on same line
@@ -193,13 +191,13 @@ input[type="hidden"] {
 .radio.inline,
 .checkbox.inline {
   display: inline-block;
-  padding-top: 5px;
+  padding-top: 0.45em;
   margin-bottom: 0;
   vertical-align: middle;
 }
 .radio.inline + .radio.inline,
 .checkbox.inline + .checkbox.inline {
-  margin-left: 10px; // space out consecutive inline controls
+  margin-left: 0.8em; // space out consecutive inline controls
 }
 
 
@@ -227,34 +225,6 @@ select:focus {
   .tab-focus();
   .box-shadow(none); // override for file inputs
 }
-
-
-
-// INPUT SIZES
-// -----------
-
-// General classes for quick sizes
-.input-mini       { width: 60px; }
-.input-small      { width: 90px; }
-.input-medium     { width: 150px; }
-.input-large      { width: 210px; }
-.input-xlarge     { width: 270px; }
-.input-xxlarge    { width: 530px; }
-
-// Grid style input sizes
-input[class*="span"],
-select[class*="span"],
-textarea[class*="span"],
-.uneditable-input[class*="span"],
-// Redeclare since the fluid row class is more specific
-.row-fluid input[class*="span"],
-.row-fluid select[class*="span"],
-.row-fluid textarea[class*="span"],
-.row-fluid .uneditable-input[class*="span"] {
-  float: none;
-  margin-left: 0;
-}
-
 
 
 // DISABLED STATE
@@ -317,7 +287,7 @@ select:focus:required:invalid {
 // ------------
 
 .form-actions {
-  padding: (@baseLineHeight - 1) 20px @baseLineHeight;
+  padding: @baseLineHeight (@baseLineHeight + 0.4);
   margin-top: @baseLineHeight;
   margin-bottom: @baseLineHeight;
   background-color: @formActionsBackground;
@@ -357,7 +327,7 @@ select:focus:required:invalid {
   display: inline-block;
   .ie7-inline-block();
   vertical-align: middle;
-  padding-left: 5px;
+  padding-left: 0.45em;
 }
 
 
@@ -368,7 +338,7 @@ select:focus:required:invalid {
 // Allow us to put symbols and text within the input field for a cleaner look
 .input-prepend,
 .input-append {
-  margin-bottom: 5px;
+  margin-bottom: 0.45em;
   input,
   select,
   .uneditable-input {
@@ -389,8 +359,8 @@ select:focus:required:invalid {
     display: inline-block;
     width: auto;
     height: @baseLineHeight;
-    min-width: 16px;
-    padding: 4px 5px;
+    min-width: 1.3em;
+    padding: 0.35em 0.45em;
     font-weight: normal;
     line-height: @baseLineHeight;
     text-align: center;
@@ -459,12 +429,12 @@ select:focus:required:invalid {
 // -----------
 
 .search-query {
-  padding-right: 14px;
-  padding-right: 4px \9;
-  padding-left: 14px;
-  padding-left: 4px \9; /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  padding-right: 1.1em;
+  padding-right: 0.35em \9;
+  padding-left: 1.1em;
+  padding-left: 0.35em \9; /* IE7-8 doesn't have border-radius, so don't indent the padding */
   margin-bottom: 0; // remove the default margin on all inputs
-  .border-radius(14px);
+  .border-radius(1.1em);
 }
 
 
@@ -520,7 +490,7 @@ select:focus:required:invalid {
 .form-inline .radio input[type="radio"],
 .form-inline .checkbox input[type="checkbox"] {
   float: left;
-  margin-right: 3px;
+  margin-right: 0.25em;
   margin-left: 0;
 }
 
@@ -548,8 +518,7 @@ legend + .control-group {
   // Float the labels left
   .control-label {
     float: left;
-    width: 140px;
-    padding-top: 5px;
+    padding-top: 0.45em;
     text-align: right;
   }
   // Move over all input controls and content
@@ -557,11 +526,11 @@ legend + .control-group {
     // Super jank IE7 fix to ensure the inputs in .input-append and input-prepend
     // don't inherit the margin of the parent, in this case .controls
     *display: inline-block;
-    *padding-left: 20px;
-    margin-left: 160px;
+    *padding-left: 1.8em;
+    margin-left: 12.35em;
     *margin-left: 0;
     &:first-child {
-      *padding-left: 160px;
+      *padding-left: 12.35em;
     }
   }
   // Remove bottom margin on block level help text since that's accounted for on .control-group
@@ -571,6 +540,6 @@ legend + .control-group {
   }
   // Move over buttons in .form-actions to align with .controls
   .form-actions {
-    padding-left: 160px;
+    padding-left: 12.35em;
   }
 }

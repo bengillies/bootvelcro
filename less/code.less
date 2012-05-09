@@ -5,7 +5,6 @@
 // Inline and block code styles
 code,
 pre {
-  padding: 0 3px 2px;
   #font > #family > .monospace;
   font-size: 0.9em;
   color: @grayDark;
@@ -14,7 +13,7 @@ pre {
 
 // Inline code
 code {
-  padding: 2px 4px;
+  padding: 0.2em 0.4em;
   color: #d14;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
@@ -23,7 +22,7 @@ code {
 // Blocks of code
 pre {
   display: block;
-  padding: (@baseLineHeight - 1) / 2;
+  padding: (@baseLineHeight - 0.1) / 2;
   margin: 0 0 @baseLineHeight / 2;
   font-size: 0.95em;
   line-height: @baseLineHeight;
@@ -52,6 +51,6 @@ pre {
 
 // Enable scrollable blocks of code
 .pre-scrollable {
-  max-height: 340px;
+  max-height: 28em;
   overflow-y: scroll;
 }

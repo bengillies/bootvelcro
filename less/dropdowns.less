@@ -22,17 +22,19 @@
   width: 0;
   height: 0;
   vertical-align: top;
-  border-top:   4px solid @black;
-  border-right: 4px solid transparent;
-  border-left:  4px solid transparent;
+  border-width: 0.35em 0.35em 0;
+  border-style: solid;
+  border-top-color: @black;
+  border-right-color: transparent;
+  border-left-color: transparent;
   content: "";
   .opacity(30);
 }
 
 // Place the caret
 .dropdown .caret {
-  margin-top: 8px;
-  margin-left: 2px;
+  margin-top: 0.65em;
+  margin-left: 0.2em;
 }
 .dropdown:hover .caret,
 .open .caret {
@@ -48,8 +50,8 @@
   z-index: @zindexDropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
-  min-width: 160px;
-  padding: 4px 0;
+  min-width: 12.5em;
+  padding: 0.35em 0;
   margin: 1px 0 0; // override default ul
   list-style: none;
   background-color: @dropdownBackground;
@@ -77,7 +79,7 @@
   // Links within the dropdown menu
   a {
     display: block;
-    padding: 3px 15px;
+    padding: 0.3em 1.2em;
     clear: both;
     font-weight: normal;
     line-height: @baseLineHeight;
@@ -124,7 +126,7 @@
   // Reverse the caret
   .caret {
     border-top: 0;
-    border-bottom: 4px solid @black;
+    border-bottom: 0.35em solid @black;
     content: "\2191";
   }
   // Different positioning for bottom up menu
@@ -138,6 +140,6 @@
 // Typeahead
 // ---------
 .typeahead {
-  margin-top: 2px; // give it some space to breathe
+  margin-top: 0.2em; // give it some space to breathe
   .border-radius(4px);
 }

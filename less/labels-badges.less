@@ -6,7 +6,7 @@
 .badge {
   font-size: 0.846em;
   font-weight: bold;
-  line-height: 14px; // ensure proper line-height if floated
+  line-height: @baseLineHeight; // ensure proper line-height if floated
   color: @white;
   vertical-align: baseline;
   white-space: nowrap;
@@ -15,12 +15,12 @@
 }
 // Set unique padding and border-radii
 .label {
-  padding: 1px 4px 2px;
+  padding: 0.1em 0.4em 0.2em;
   .border-radius(3px);
 }
 .badge {
-  padding: 1px 9px 2px;
-  .border-radius(9px);
+  padding: 0.1em 0.9em 0.2em;
+  .border-radius(0.9em);
 }
 
 // Hover state, but only for links
