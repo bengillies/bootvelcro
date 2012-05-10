@@ -1,132 +1,22 @@
-[Twitter Bootstrap](http://twitter.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
-=================
+Bootvelcro
+==========
 
-Bootstrap provides simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions. In other words, it's a front-end toolkit for faster, more beautiful web development. It's created and maintained by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat) at Twitter.
+Bootvelcro is a fork of Twitter [Bootstrap](http://twitter.github.com/bootstrap) with a couple of key differences.
 
-To get started, checkout http://twitter.github.com/bootstrap!
+Firstly, there is greatly reduced scope. Bootstrap is an excellent resource, and this fork wouldn't exist without it, but there are a few parts that don't really sit very well with me. So I've removed them. Bootvelcro lacks the following fetures that are present in Bootstrap:
 
+* JavaScript - Bootvelcro is a simple CSS only library.
+* A CSS Grid - Bootvelcro makes HTML elements look nice and _that's it_.
+* Media Queries - Bootvelcro has no custom media queries.
+* Icons - Bootvelcro includes no icons.
+* Accordions, Modals, Carousels, Pagination, Popovers, Thumbnails, and Tooltips
 
+As you may have noticed, Bootvelcro is really simple. It doesn't include the kitchen sink, and it doesn't include it on purpose.
 
-Quick start
------------
+It holds the viewpoint that things like modals, accordions, and icons are best left to the developer building the site and that, in doing this, things will be a lot easier down the road.
 
-Clone the repo, `git clone git@github.com:twitter/bootstrap.git`, or [download the latest release](https://github.com/twitter/bootstrap/zipball/master).
+As for grid systems and media queries, sites that need them can add one of the many that already exist. The purpose of bootvelcro is to make HTML elements look nice so that you can continue to build your siteand not have to worry about replacing bits or picking something that's already compatible. It just does look-nice. That's it.
 
+Secondly, All the key measurements are in em's rather than px's. If you like sort of thing, this probably means a lot to you.
 
-
-Versioning
-----------
-
-For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Bootstrap will be maintained under the Semantic Versioning guidelines as much as possible.
-
-Releases will be numbered with the follow format:
-
-`<major>.<minor>.<patch>`
-
-And constructed with the following guidelines:
-
-* Breaking backward compatibility bumps the major (and resets the minor and patch)
-* New additions without breaking backward compatibility bumps the minor (and resets the patch)
-* Bug fixes and misc changes bumps the patch
-
-For more information on SemVer, please visit http://semver.org/.
-
-
-
-Bug tracker
------------
-
-Have a bug? Please create an issue here on GitHub!
-
-https://github.com/twitter/bootstrap/issues
-
-
-
-Twitter account
----------------
-
-Keep up to date on announcements and more by following Bootstrap on Twitter, [@TwBootstrap](http://twitter.com/TwBootstrap).
-
-
-
-Blog
-----
-
-Read more detailed announcements, discussions, and more on [The Official Twitter Bootstrap Blog](http://blog.getbootstrap.com).
-
-
-
-Mailing list
-------------
-
-Have a question? Ask on our mailing list!
-
-twitter-bootstrap@googlegroups.com
-
-http://groups.google.com/group/twitter-bootstrap
-
-
-
-IRC
----
-
-Server: irc.freenode.net
-
-Channel: ##twitter-bootstrap (the double ## is not a typo)
-
-
-
-Developers
-----------
-
-We have included a makefile with convenience methods for working with the Bootstrap library.
-
-+ **dependencies**
-Our makefile depends on you having recess, uglify.js, and jshint installed. To install, just run the following command in npm:
-
-```
-$ npm install recess uglify-js jshint -g
-```
-
-+ **build** - `make`
-Runs the recess compiler to rebuild the `/less` files and compiles the docs pages. Requires recess and uglify-js. <a href="http://twitter.github.com/bootstrap/less.html#compiling">Read more in our docs &raquo;</a>
-
-+ **test** - `make test`
-Runs jshint and qunit tests headlessly in phantom js (used for ci). Depends on having phatomjs installed.
-
-+ **watch** - `make watch`
-This is a convenience method for watching just Less files and automatically building them whenever you save. Requires the Watchr gem.
-
-
-
-Authors
--------
-
-**Mark Otto**
-
-+ http://twitter.com/mdo
-+ http://github.com/markdotto
-
-**Jacob Thornton**
-
-+ http://twitter.com/fat
-+ http://github.com/fat
-
-
-
-Copyright and license
----------------------
-
-Copyright 2012 Twitter, Inc.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this work except in compliance with the License.
-You may obtain a copy of the License in the LICENSE file, or at:
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+All other details are like Bootstrap.
