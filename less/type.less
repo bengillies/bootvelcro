@@ -18,9 +18,8 @@ p {
 }
 .lead {
   margin-bottom: @baseLineHeight;
-  font-size: 20px;
+  font-size: 1.57em;
   font-weight: 200;
-  line-height: @baseLineHeight * 1.5;
 }
 
 // HEADINGS
@@ -38,40 +37,40 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 h1 {
-  font-size: 30px;
-  line-height: @baseLineHeight * 2;
+  font-size: 2.35em;
+  line-height: @baseLineHeight;
   small {
-    font-size: 18px;
+    font-size: 1.6em;
   }
 }
 h2 {
-  font-size: 24px;
-  line-height: @baseLineHeight * 2;
+  font-size: 1.88em;
+  line-height: 2em;
   small {
-    font-size: 18px;
+    font-size: 1.6em;
   }
 }
 h3 {
-  font-size: 18px;
-  line-height: @baseLineHeight * 1.5;
+  font-size: 1.6em;
+  line-height: 1.5em;
   small {
-    font-size: 14px;
+    font-size: 1.1em;
   }
 }
 h4, h5, h6 {
   line-height: @baseLineHeight;
 }
 h4 {
-  font-size: 14px;
+  font-size: 1.1em;
   small {
-    font-size: 12px;
+    font-size: 0.9em;
   }
 }
 h5 {
-  font-size: 12px;
+  font-size: 0.9em;
 }
 h6 {
-  font-size: 11px;
+  font-size: 0.86em;
   color: @grayLight;
   text-transform: uppercase;
 }
@@ -94,7 +93,7 @@ h6 {
 // Unordered and Ordered lists
 ul, ol {
   padding: 0;
-  margin: 0 0 @baseLineHeight / 2 25px;
+  margin: 0 0 @baseLineHeight / 2 2em;
 }
 ul ul,
 ul ol,
@@ -127,7 +126,7 @@ dd {
 }
 dt {
   font-weight: bold;
-  line-height: @baseLineHeight - 1; // fix jank Helvetica Neue font bug
+  line-height: @baseLineHeight - 0.1; // fix jank Helvetica Neue font bug
 }
 dd {
   margin-left: @baseLineHeight / 2;
@@ -136,13 +135,13 @@ dd {
 .dl-horizontal {
   dt {
     float: left;
-    width: 120px;
+    width: 9.4em;
     clear: left;
     text-align: right;
     .text-overflow();
   }
   dd {
-    margin-left: 130px;
+    margin-left: 10.2em;
   }
 }
 
@@ -180,12 +179,12 @@ abbr.initialism {
 
 // Blockquotes
 blockquote {
-  padding: 0 0 0 15px;
+  padding: 0 0 0 1.1em;
   margin: 0 0 @baseLineHeight;
-  border-left: 5px solid @grayLighter;
+  border-left: 0.45em solid @grayLighter;
   p {
     margin-bottom: 0;
-    #font > .shorthand(16px,300,@baseLineHeight * 1.25);
+    #font > .shorthand(1.25em,300,@baseLineHeight * 1.25);
   }
   small {
     display: block;
@@ -199,9 +198,9 @@ blockquote {
   // Float right with text-align: right
   &.pull-right {
     float: right;
-    padding-right: 15px;
+    padding-right: 1.1em;
     padding-left: 0;
-    border-right: 5px solid @grayLighter;
+    border-right: 0.45em solid @grayLighter;
     border-left: 0;
     p,
     small {
