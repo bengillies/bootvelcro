@@ -27,8 +27,8 @@
   // Default
   outline: thin dotted #333;
   // Webkit
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+  outline: 0.4em auto -webkit-focus-ring-color;
+  outline-offset: -0.2em;
 }
 
 // Center-align a block level element
@@ -152,7 +152,7 @@
 .input-block-level {
   display: block;
   width: 100%;
-  min-height: 28px;        // Make inputs at least the height of their button counterpart
+  min-height: 2.2em;        // Make inputs at least the height of their button counterpart
   .box-sizing(border-box); // Makes inputs behave like true block-level elements
 }
 
@@ -424,8 +424,8 @@
   // to negative-margin away, but so it goes.
   *width: 100%;
   height: 1px;
-  margin: ((@baseLineHeight / 2) - 1) 1px; // 8px 1px
-  *margin: -5px 0 5px;
+  margin: 0.7em 0.1em;
+  *margin: -0.45em 0 0.45em;
   overflow: hidden;
   background-color: #e5e5e5;
   border-bottom: 1px solid @white;
@@ -455,7 +455,7 @@
 // Navbar vertical align
 // -------------------------
 // Vertically center elements in the navbar.
-// Example: an element has a height of 30px, so write out `.navbarVerticalAlign(30px);` to calculate the appropriate top margin.
+// Example: an element has a height of 2em, so write out `.navbarVerticalAlign(2em);` to calculate the appropriate top margin.
 .navbarVerticalAlign(@elementHeight) {
   margin-top: (@navbarHeight - @elementHeight) / 2;
 }
@@ -464,7 +464,7 @@
 // -------------------------
 // For tipsies and popovers
 #popoverArrow {
-  .top(@arrowWidth: 5px, @color: @black) {
+  .top(@arrowWidth: 0.45em, @color: @black) {
     bottom: 0;
     left: 50%;
     margin-left: -@arrowWidth;
@@ -472,7 +472,7 @@
     border-right: @arrowWidth solid transparent;
     border-top: @arrowWidth solid @color;
   }
-  .left(@arrowWidth: 5px, @color: @black) {
+  .left(@arrowWidth: 0.45em, @color: @black) {
     top: 50%;
     right: 0;
     margin-top: -@arrowWidth;
@@ -480,7 +480,7 @@
     border-bottom: @arrowWidth solid transparent;
     border-left: @arrowWidth solid @color;
   }
-  .bottom(@arrowWidth: 5px, @color: @black) {
+  .bottom(@arrowWidth: 0.45em, @color: @black) {
     top: 0;
     left: 50%;
     margin-left: -@arrowWidth;
@@ -488,7 +488,7 @@
     border-right: @arrowWidth solid transparent;
     border-bottom: @arrowWidth solid @color;
   }
-  .right(@arrowWidth: 5px, @color: @black) {
+  .right(@arrowWidth: 0.45em, @color: @black) {
     top: 50%;
     left: 0;
     margin-top: -@arrowWidth;
