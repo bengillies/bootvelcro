@@ -255,16 +255,22 @@ input[type="checkbox"][readonly] {
 // FORM FIELD FEEDBACK STATES
 // --------------------------
 
+.control-group.warning,
+.control-group.error,
+.control-group.success {
+  background-color: transparent;
+}
+
 // Warning
-.control-group.warning {
+.warning {
   .formFieldState(@warningText, @warningText, @warningBackground);
 }
 // Error
-.control-group.error {
+.error {
   .formFieldState(@errorText, @errorText, @errorBackground);
 }
 // Success
-.control-group.success {
+.success {
   .formFieldState(@successText, @successText, @successBackground);
 }
 
