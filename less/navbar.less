@@ -27,11 +27,14 @@
 
 // Brand, links, text, and buttons
 .navbar {
+
   color: @navbarText;
+
   // Hover and active states
   .brand:hover {
     text-decoration: none;
   }
+
   // Website or project name
   .brand {
     float: left;
@@ -45,11 +48,13 @@
     line-height: 1;
     color: @navbarBrandColor;
   }
+
   // Plain text in topbar
   .navbar-text {
     margin-bottom: 0;
     line-height: @navbarHeight;
   }
+
   // Janky solution for now to account for links outside the .nav
   .navbar-link {
     color: @navbarLinkColor;
@@ -57,13 +62,28 @@
       color: @navbarLinkColorHover;
     }
   }
+
   // Buttons in navbar
   .btn,
   .btn-group {
-    .navbarVerticalAlign(3em); // Vertically center in navbar
+    display: inline-block;
+    color: @navbarLinkColorHover;
+    padding: 0.6em 0.85em;
+    height: @baseLineHeight;
+    line-height: @baseLineHeight;
+    .buttonBackground(@navbarBackgroundHighlight, @navbarBackground);
+    .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)");
+    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
   }
-  .btn-group .btn {
-    margin: 0; // then undo the margin here so we don't accidentally double it
+
+  .btn {
+    margin: ((@navbarHeight - @baseLineHeight) / 2 - 0.45) 0.45em;
+  }
+
+  > *,
+  > .navbar-inner > .container > * {
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -195,21 +215,7 @@
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 }
-// Buttons
-.navbar .btn {
-  display: inline-block;
-  padding: 0.35em 0.85em;
-  // Vertically center the button given @navbarHeight
-  @elementHeight: 1.5em;
-  margin: ((@navbarHeight - @elementHeight) / 2) 0.45em ((@navbarHeight - @elementHeight) / 2);
-  line-height: @baseLineHeight;
-}
-.navbar .btn-group {
-  margin: 0;
-  // Vertically center the button given @navbarHeight
-  @elementHeight: 1.6em;
-  padding: ((@navbarHeight - @elementHeight) / 2) 0.45em ((@navbarHeight - @elementHeight) / 2);
-}
+
 // Hover
 .navbar .nav > li > a:hover {
   background-color: @navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
