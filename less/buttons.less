@@ -45,14 +45,18 @@
   .tab-focus();
 }
 
-// Active state
-.btn.active,
-.btn:active {
+.buttonActive() {
   background-color: darken(@white, 10%);
   background-color: darken(@white, 15%) e("\9");
   background-image: none;
   outline: 0;
   .box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
+}
+
+// Active state
+.btn.active,
+.btn:active {
+  .buttonActive();
 }
 
 // Disabled state
@@ -186,4 +190,51 @@ input[type="submit"].btn {
     *padding-top: 1px;
     *padding-bottom: 1px;
   }
+}
+
+// Button style checkboxes and Radio button groups
+// -------------------------------------------------
+
+.btn-checkbox [type="checkbox"],
+.btn-radio [type="radio"] {
+  display: none;
+}
+
+.btn-checkbox [type="checkbox"]:checked ~ .btn,
+.btn-radio [type="radio"]:checked ~ .btn {
+  .buttonActive();
+}
+
+.postCheckboxActive(@color) {
+  background-color: @color;
+  *background-color: darken(@color, 5%);
+  background-color: darken(@color, 10%) e("\9");
+  color: rgba(255,255,255,.75);
+}
+
+
+// Set up button colors on active
+.btn-checkbox [type="checkbox"]:checked ~ .btn.primary,
+.btn-radio [type="radio"]:checked ~ .btn.primary {
+  .postCheckboxActive(@btnPrimaryBackgroundHighlight);
+}
+.btn-checkbox [type="checkbox"]:checked ~ .btn.warning,
+.btn-radio [type="radio"]:checked ~ .btn.warning {
+  .postCheckboxActive(@btnWarningBackgroundHighlight);
+}
+.btn-checkbox [type="checkbox"]:checked ~ .btn.danger,
+.btn-radio [type="radio"]:checked ~ .btn.danger {
+  .postCheckboxActive(@btnDangerBackgroundHighlight);
+}
+.btn-checkbox [type="checkbox"]:checked ~ .btn.success,
+.btn-radio [type="radio"]:checked ~ .btn.success {
+  .postCheckboxActive(@btnSuccessBackgroundHighlight);
+}
+.btn-checkbox [type="checkbox"]:checked ~ .btn.info,
+.btn-radio [type="radio"]:checked ~ .btn.info {
+  .postCheckboxActive(@btnInfoBackgroundHighlight);
+}
+.btn-checkbox [type="checkbox"]:checked ~ .btn.inverse,
+.btn-radio [type="radio"]:checked ~ .btn.inverse {
+  .postCheckboxActive(@btnInverseBackgroundHighlight);
 }

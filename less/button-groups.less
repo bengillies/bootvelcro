@@ -25,13 +25,34 @@
 }
 
 // Float them, remove border radius, then re-add to first and last elements
+.btn-group > .btn-checkbox,
+.btn-group > .btn-radio,
 .btn-group > .btn {
   position: relative;
   float: left;
+}
+
+.btn-group > .btn-checkbox.inline + .btn-checkbox.inline,
+.btn-group > .btn-radio.inline + .btn-radio.inline,
+.btn-group > .btn-checkbox:first-child,
+.btn-group > .btn-radio:first-child,
+.btn-group > .btn-checkbox,
+.btn-group > .btn-radio {
+  margin-left: 0;
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.btn-group > .btn-checkbox > .btn,
+.btn-group > .btn-radio > .btn,
+.btn-group > .btn {
   border-left-width: 0;
   .border-radius(0);
 }
+
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+.btn-group > .btn-checkbox:first-child .btn,
+.btn-group > .btn-radio:first-child .btn,
 .btn-group > .btn:first-child {
   border-left-width: 1px;
      -webkit-border-top-left-radius: 4px;
@@ -42,6 +63,8 @@
           border-bottom-left-radius: 4px;
 }
 // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+.btn-group > .btn-checkbox:last-child .btn,
+.btn-group > .btn-radio:last-child .btn,
 .btn-group > .btn:last-child,
 .btn-group > .dropdown-toggle {
      -webkit-border-top-right-radius: 4px;
@@ -52,6 +75,8 @@
           border-bottom-right-radius: 4px;
 }
 // Reset corners for large buttons
+.btn-group > .btn-checkbox:first-child .btn.large,
+.btn-group > .btn-radio:first-child .btn.large,
 .btn-group > .btn.large:first-child {
   margin-left: 0;
      -webkit-border-top-left-radius: 6px;
@@ -61,6 +86,8 @@
       -moz-border-radius-bottomleft: 6px;
           border-bottom-left-radius: 6px;
 }
+.btn-group > .btn-checkbox:last-child .btn.large,
+.btn-group > .btn-radio:last-child .btn.large,
 .btn-group > .btn.large:last-child,
 .btn-group > .large.dropdown-toggle {
      -webkit-border-top-right-radius: 6px;
