@@ -33,7 +33,7 @@
   text-decoration: none;
   background-color: darken(@white, 10%);
   *background-color: darken(@white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
-  background-position: 0 -1.1em;
+  background-position: 0 -2.5em;
 
   // transition is only when going to hover, otherwise the background
   // behind the gradient (there for IE<=9 fallback) gets mismatched
@@ -97,28 +97,28 @@
 
 // Set text color
 // -------------------------
-.btn-primary,
-.btn-primary:hover,
-.btn-warning,
-.btn-warning:hover,
-.btn-danger,
-.btn-danger:hover,
-.btn-success,
-.btn-success:hover,
-.btn-info,
-.btn-info:hover,
-.btn-inverse,
-.btn-inverse:hover {
+.primary,
+.primary:hover,
+.warning,
+.warning:hover,
+.danger,
+.danger:hover,
+.success,
+.success:hover,
+.info,
+.info:hover,
+.inverse,
+.inverse:hover {
   color: @white;
   text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 }
 // Provide *some* extra contrast for those who can get it
-.btn-primary.active,
-.btn-warning.active,
-.btn-danger.active,
-.btn-success.active,
-.btn-info.active,
-.btn-inverse.active {
+.primary.active,
+.warning.active,
+.danger.active,
+.success.active,
+.info.active,
+.inverse.active {
   color: rgba(255,255,255,.75);
 }
 
@@ -129,27 +129,32 @@
   border-color: #ccc;
   border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
 }
-.btn-primary {
+.btn {
+  #gradient > .noBackgroundVertical(rgba(255,255,255,.3), rgba(125,125,125,.2));
+  border-color: rgba(125,125,125,.2) rgba(125,125,125,.2) darken(rgba(125,125,125,.2), 15%);
+  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+}
+.primary {
   .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
 }
 // Warning appears are orange
-.btn-warning {
+.warning {
   .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
 }
 // Danger and error appear as red
-.btn-danger {
+.danger {
   .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
 }
 // Success appears as green
-.btn-success {
+.success {
   .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
 }
 // Info appears as a neutral blue
-.btn-info {
+.info {
   .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
 }
 // Inverse appears as dark gray
-.btn-inverse {
+.inverse {
   .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
 }
 
