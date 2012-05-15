@@ -29,9 +29,9 @@ Secondly, All the key measurements are in em's rather than px's. If you like sor
 Simplicity
 ----------
 
-__This section is currently not implemented.__
+__This section is currently partially implemented.__
 
-Bootstrap has a tendency to suffer from divitis and ugly HTML. Bootvelcro makes an effort to reduce this complexity. The navbar in Bootstrap, for example, looks like this:
+Bootstrap has a tendency to suffer from divitis. Bootvelcro makes an effort to reduce this complexity. The navbar in Bootstrap, for example, looks like this:
 
 	<div class="navbar">
 		<div class="navbar-inner">
@@ -43,6 +43,31 @@ Bootstrap has a tendency to suffer from divitis and ugly HTML. Bootvelcro makes 
 
 In Bootvelcro however, it looks like this:
 
-	<div class="navbar">
+	<nav class="navbar">
 		...
+	</nav>
+
+Checkbox style toggling on buttons, in Bootstrap, requires JavaScript and looks like this:
+
+	<div class="btn-group" data-toggle="buttons-checkbox">
+		<button class="btn">Left</button>
+		<button class="btn">Middle</button>
+		<button class="btn">Right</button>
+	</div>
+
+Whereas in Bootvelcro it doesn't, and can be built using actual checkboxes with:
+
+	<div class="btn-group">
+		<label class="btn-checkbox">
+			<input type="checkbox">
+			<span class="btn">Left</span>
+		</label>
+		<label class="btn-checkbox">
+			<input type="checkbox">
+			<span class="btn">Middle</span>
+		</label>
+		<label class="btn-checkbox">
+			<input type="checkbox">
+			<span class="btn">Right</span>
+		</label>
 	</div>
