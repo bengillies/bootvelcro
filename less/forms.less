@@ -255,10 +255,17 @@ input[type="checkbox"][readonly] {
 // FORM FIELD FEEDBACK STATES
 // --------------------------
 
+.control-group.warning:hover,
+.control-group.error:hover,
+.control-group.success:hover,
+.control-group.warning.active,
+.control-group.error.active,
+.control-group.success.active,
 .control-group.warning,
 .control-group.error,
 .control-group.success {
   background-color: transparent;
+  text-shadow: none;
 }
 
 // Warning
