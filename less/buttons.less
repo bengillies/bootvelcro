@@ -37,7 +37,7 @@
 
   // transition is only when going to hover, otherwise the background
   // behind the gradient (there for IE<=9 fallback) gets mismatched
-  .transition(background-position .1s linear);
+  // .transition(background-position .1s linear);
 }
 
 // Focus state for keyboard and accessibility
@@ -46,8 +46,6 @@
 }
 
 .buttonActive() {
-  background-color: darken(@white, 10%);
-  background-color: darken(@white, 15%) e("\9");
   background-image: none;
   outline: 0;
   .box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
@@ -56,6 +54,8 @@
 // Active state
 .btn.active,
 .btn:active {
+  background-color: darken(@white, 10%);
+  background-color: darken(@white, 15%) e("\9");
   .buttonActive();
 }
 
@@ -74,7 +74,7 @@
 // --------------------------------------------------
 
 // Large
-.btn-large {
+.btn.large {
   padding: 0.65em 0.95em;
   font-size: 1.1em;
   line-height: normal;
@@ -82,14 +82,14 @@
 }
 
 // Small
-.btn-small {
+.btn.small {
   padding: 0.5em 0.85em;
   font-size: 0.85em;
   line-height: 1.5em;
 }
 
 // Mini
-.btn-mini {
+.btn.mini {
   padding: 0.2em 0.6em;
   font-size: 0.85em;
   line-height: 1.3em;
@@ -178,15 +178,15 @@ input[type="submit"].btn {
   // IE7 has some default padding on button controls
   *padding-top: 2px;
   *padding-bottom: 2px;
-  &.btn-large {
+  &.btn.large {
     *padding-top: 7px;
     *padding-bottom: 7px;
   }
-  &.btn-small {
+  &.btn.small {
     *padding-top: 3px;
     *padding-bottom: 3px;
   }
-  &.btn-mini {
+  &.btn.mini {
     *padding-top: 1px;
     *padding-bottom: 1px;
   }
