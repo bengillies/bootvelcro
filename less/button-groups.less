@@ -4,32 +4,32 @@
 
 // Make the div behave like a button
 .btn-group {
-  position: relative;
-  .clearfix(); // clears the floated buttons
-  .ie7-restore-left-whitespace();
+	position: relative;
+	.clearfix(); // clears the floated buttons
+	.ie7-restore-left-whitespace();
 }
 
 // Space out series of button groups
 .btn-group + .btn-group {
-  margin-left: 0.4em;
+	margin-left: 0.4em;
 }
 
 // Optional: Group multiple button groups together for a toolbar
 .btn-toolbar {
-  margin-top: @baseLineHeight / 2;
-  margin-bottom: @baseLineHeight / 2;
-  .btn-group {
-    display: inline-block;
-    .ie7-inline-block();
-  }
+	margin-top: @baseLineHeight / 2;
+	margin-bottom: @baseLineHeight / 2;
+	.btn-group {
+		display: inline-block;
+		.ie7-inline-block();
+	}
 }
 
 // Float them, remove border radius, then re-add to first and last elements
 .btn-group > .btn-checkbox,
 .btn-group > .btn-radio,
 .btn-group > .btn {
-  position: relative;
-  float: left;
+	position: relative;
+	float: left;
 }
 
 .btn-group > .btn-checkbox.inline + .btn-checkbox.inline,
@@ -38,64 +38,64 @@
 .btn-group > .btn-radio:first-child,
 .btn-group > .btn-checkbox,
 .btn-group > .btn-radio {
-  margin-left: 0;
-  padding-left: 0;
-  padding-top: 0;
+	margin-left: 0;
+	padding-left: 0;
+	padding-top: 0;
 }
 
 .btn-group > .btn-checkbox > .btn,
 .btn-group > .btn-radio > .btn,
 .btn-group > .btn {
-  border-left-width: 0;
-  .border-radius(0);
+	border-left-width: 0;
+	.border-radius(0);
 }
 
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
 .btn-group > .btn-checkbox:first-child .btn,
 .btn-group > .btn-radio:first-child .btn,
 .btn-group > .btn:first-child {
-  border-left-width: 1px;
-     -webkit-border-top-left-radius: 4px;
-         -moz-border-radius-topleft: 4px;
-             border-top-left-radius: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-      -moz-border-radius-bottomleft: 4px;
-          border-bottom-left-radius: 4px;
+	border-left-width: 1px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-left-radius: 4px;
 }
 // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
 .btn-group > .btn-checkbox:last-child .btn,
 .btn-group > .btn-radio:last-child .btn,
 .btn-group > .btn:last-child,
 .btn-group > .dropdown-toggle {
-     -webkit-border-top-right-radius: 4px;
-         -moz-border-radius-topright: 4px;
-             border-top-right-radius: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-      -moz-border-radius-bottomright: 4px;
-          border-bottom-right-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-bottom-right-radius: 4px;
 }
 // Reset corners for large buttons
 .btn-group > .btn-checkbox:first-child .btn.large,
 .btn-group > .btn-radio:first-child .btn.large,
 .btn-group > .btn.large:first-child {
-  margin-left: 0;
-     -webkit-border-top-left-radius: 6px;
-         -moz-border-radius-topleft: 6px;
-             border-top-left-radius: 6px;
-  -webkit-border-bottom-left-radius: 6px;
-      -moz-border-radius-bottomleft: 6px;
-          border-bottom-left-radius: 6px;
+	margin-left: 0;
+	-webkit-border-top-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	border-top-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-bottom-left-radius: 6px;
 }
 .btn-group > .btn-checkbox:last-child .btn.large,
 .btn-group > .btn-radio:last-child .btn.large,
 .btn-group > .btn.large:last-child,
 .btn-group > .large.dropdown-toggle {
-     -webkit-border-top-right-radius: 6px;
-         -moz-border-radius-topright: 6px;
-             border-top-right-radius: 6px;
-  -webkit-border-bottom-right-radius: 6px;
-      -moz-border-radius-bottomright: 6px;
-          border-bottom-right-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-moz-border-radius-topright: 6px;
+	border-top-right-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+	border-bottom-right-radius: 6px;
 }
 
 // On hover/focus/active, bring the proper btn to front
@@ -103,13 +103,13 @@
 .btn-group > .btn:focus,
 .btn-group > .btn:active,
 .btn-group > .btn.active {
-  z-index: 2;
+	z-index: 2;
 }
 
 // On active and open, don't show outline
 .btn-group .dropdown-toggle:active,
 .btn-group.open .dropdown-toggle {
-  outline: 0;
+	outline: 0;
 }
 
 
@@ -119,82 +119,82 @@
 
 // Give the line between buttons some depth
 .btn-group > .dropdown-toggle {
-  padding-left: 0.65em;
-  padding-right: 0.65em;
-  .box-shadow(~"inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
-  *padding-top: 0.4em;
-  *padding-bottom: 0.4em;
+	padding-left: 0.65em;
+	padding-right: 0.65em;
+	.box-shadow(~"inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
+	*padding-top: 0.4em;
+	*padding-bottom: 0.4em;
 }
 .btn-group > .btn.mini.dropdown-toggle {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
 }
 .btn-group > .btn.small.dropdown-toggle {
-  *padding-top: 0.4em;
-  *padding-bottom: 0.4em;
+	*padding-top: 0.4em;
+	*padding-bottom: 0.4em;
 }
 .btn-group > .btn.large.dropdown-toggle {
-  padding-left: 0.8em;
-  padding-right: 0.8em;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
 }
 
 .btn-group.open {
 
-  // The clickable button for toggling the menu
-  // Remove the gradient and set the same inset shadow as the :active state
-  .dropdown-toggle {
-    background-image: none;
-    .box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
-  }
+	// The clickable button for toggling the menu
+	// Remove the gradient and set the same inset shadow as the :active state
+	.dropdown-toggle {
+		background-image: none;
+		.box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
+	}
 
-  // Keep the hover's background when dropdown is open
-  .btn.dropdown-toggle {
-    background-color: @btnBackgroundHighlight;
-  }
-  .btn.primary.dropdown-toggle {
-    background-color: @btnPrimaryBackgroundHighlight;
-  }
-  .btn.warning.dropdown-toggle {
-    background-color: @btnWarningBackgroundHighlight;
-  }
-  .btn.danger.dropdown-toggle {
-    background-color: @btnDangerBackgroundHighlight;
-  }
-  .btn.success.dropdown-toggle {
-    background-color: @btnSuccessBackgroundHighlight;
-  }
-  .btn.info.dropdown-toggle {
-    background-color: @btnInfoBackgroundHighlight;
-  }
-  .btn.inverse.dropdown-toggle {
-    background-color: @btnInverseBackgroundHighlight;
-  }
+	// Keep the hover's background when dropdown is open
+	.btn.dropdown-toggle {
+		background-color: @btnBackgroundHighlight;
+	}
+	.btn.primary.dropdown-toggle {
+		background-color: @btnPrimaryBackgroundHighlight;
+	}
+	.btn.warning.dropdown-toggle {
+		background-color: @btnWarningBackgroundHighlight;
+	}
+	.btn.danger.dropdown-toggle {
+		background-color: @btnDangerBackgroundHighlight;
+	}
+	.btn.success.dropdown-toggle {
+		background-color: @btnSuccessBackgroundHighlight;
+	}
+	.btn.info.dropdown-toggle {
+		background-color: @btnInfoBackgroundHighlight;
+	}
+	.btn.inverse.dropdown-toggle {
+		background-color: @btnInverseBackgroundHighlight;
+	}
 }
 
 
 // Reposition the caret
 .btn .caret {
-  margin-top: 0.6em;
-  margin-left: 0;
+	margin-top: 0.6em;
+	margin-left: 0;
 }
 .btn:hover .caret,
 .open.btn-group .caret {
-  .opacity(100);
+	.opacity(100);
 }
 // Carets in other button sizes
 .btn.mini .caret {
-  margin-top: 0.5em;
+	margin-top: 0.5em;
 }
 .btn.small .caret {
-  margin-top: 0.6em;
+	margin-top: 0.6em;
 }
 .btn.large .caret {
-  margin-top: 0.45em;
-  border-width: 0.35em 0.35em 0;
+	margin-top: 0.45em;
+	border-width: 0.35em 0.35em 0;
 }
 // Upside down carets for .dropup
 .dropup .btn.large .caret {
-  border-width: 0 0.35em 0.35em;
+	border-width: 0 0.35em 0.35em;
 }
 
 
@@ -206,10 +206,10 @@
 .btn.info,
 .btn.success,
 .btn.inverse {
-  .caret {
-    border-top-color: @white;
-    border-bottom-color: @white;
-    .opacity(75);
-  }
+	.caret {
+		border-top-color: @white;
+		border-bottom-color: @white;
+		.opacity(75);
+	}
 }
 

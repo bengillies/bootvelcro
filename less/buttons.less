@@ -7,66 +7,66 @@
 
 // Core
 .btn {
-  display: inline-block;
-  .ie7-inline-block();
-  padding: 0.35em 0.8em;
-  margin-bottom: 0; // For input.btn
-  font-size: 1em;
-  line-height: @baseLineHeight;
-  color: @grayDark;
-  text-align: center;
-  text-shadow: 0 1px 1px rgba(255,255,255,.75);
-  vertical-align: middle;
-  cursor: pointer;
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight);
-  border: 1px solid @btnBorder;
-  *border: 0; // Remove the border to prevent IE7's black border on input:focus
-  border-bottom-color: darken(@btnBorder, 10%);
-  .border-radius(4px);
-  .ie7-restore-left-whitespace(); // Give IE7 some love
-  .box-shadow(~"inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
+	display: inline-block;
+	.ie7-inline-block();
+	padding: 0.35em 0.8em;
+	margin-bottom: 0; // For input.btn
+	font-size: 1em;
+	line-height: @baseLineHeight;
+	color: @grayDark;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255,255,255,.75);
+	vertical-align: middle;
+	cursor: pointer;
+	.buttonBackground(@btnBackground, @btnBackgroundHighlight);
+	border: 1px solid @btnBorder;
+	*border: 0; // Remove the border to prevent IE7's black border on input:focus
+	border-bottom-color: darken(@btnBorder, 10%);
+	.border-radius(4px);
+	.ie7-restore-left-whitespace(); // Give IE7 some love
+	.box-shadow(~"inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
 }
 
 // Hover state
 .btn:hover {
-  color: @grayDark;
-  text-decoration: none;
-  background-color: darken(@white, 10%);
-  *background-color: darken(@white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
-  background-position: 0 -2.5em;
+	color: @grayDark;
+	text-decoration: none;
+	background-color: darken(@white, 10%);
+	*background-color: darken(@white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
+	background-position: 0 -2.5em;
 
-  // transition is only when going to hover, otherwise the background
-  // behind the gradient (there for IE<=9 fallback) gets mismatched
-  // .transition(background-position .1s linear);
+	// transition is only when going to hover, otherwise the background
+	// behind the gradient (there for IE<=9 fallback) gets mismatched
+	// .transition(background-position .1s linear);
 }
 
 // Focus state for keyboard and accessibility
 .btn:focus {
-  .tab-focus();
+	.tab-focus();
 }
 
 .buttonActive() {
-  background-image: none;
-  outline: 0;
-  .box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
+	background-image: none;
+	outline: 0;
+	.box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
 }
 
 // Active state
 .btn.active,
 .btn:active {
-  background-color: darken(@white, 10%);
-  background-color: darken(@white, 15%) e("\9");
-  .buttonActive();
+	background-color: darken(@white, 10%);
+	background-color: darken(@white, 15%) e("\9");
+	.buttonActive();
 }
 
 // Disabled state
 .btn.disabled,
 .btn[disabled] {
-  cursor: default;
-  background-color: darken(@white, 10%);
-  background-image: none;
-  .opacity(65);
-  .box-shadow(none);
+	cursor: default;
+	background-color: darken(@white, 10%);
+	background-image: none;
+	.opacity(65);
+	.box-shadow(none);
 }
 
 
@@ -75,24 +75,24 @@
 
 // Large
 .btn.large {
-  padding: 0.65em 0.95em;
-  font-size: 1.1em;
-  line-height: normal;
-  .border-radius(5px);
+	padding: 0.65em 0.95em;
+	font-size: 1.1em;
+	line-height: normal;
+	.border-radius(5px);
 }
 
 // Small
 .btn.small {
-  padding: 0.5em 0.85em;
-  font-size: 0.85em;
-  line-height: 1.5em;
+	padding: 0.5em 0.85em;
+	font-size: 0.85em;
+	line-height: 1.5em;
 }
 
 // Mini
 .btn.mini {
-  padding: 0.2em 0.6em;
-  font-size: 0.85em;
-  line-height: 1.3em;
+	padding: 0.2em 0.6em;
+	font-size: 0.85em;
+	line-height: 1.3em;
 }
 
 
@@ -113,8 +113,8 @@
 .info:hover,
 .inverse,
 .inverse:hover {
-  color: @white;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+	color: @white;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 }
 // Provide *some* extra contrast for those who can get it
 .primary.active,
@@ -123,43 +123,43 @@
 .success.active,
 .info.active,
 .inverse.active {
-  color: rgba(255,255,255,.75);
+	color: rgba(255,255,255,.75);
 }
 
 // Set the backgrounds
 // -------------------------
 .btn {
-  // reset here as of 2.0.3 due to Recess property order
-  border-color: #ccc;
-  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+	// reset here as of 2.0.3 due to Recess property order
+	border-color: #ccc;
+	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
 }
 .btn {
-  #gradient > .noBackgroundVertical(rgba(255,255,255,.3), rgba(125,125,125,.2));
-  border-color: rgba(125,125,125,.2) rgba(125,125,125,.2) darken(rgba(125,125,125,.2), 15%);
-  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+	#gradient > .noBackgroundVertical(rgba(255,255,255,.3), rgba(125,125,125,.2));
+	border-color: rgba(125,125,125,.2) rgba(125,125,125,.2) darken(rgba(125,125,125,.2), 15%);
+	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
 }
 .primary {
-  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+	.buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
 }
 // Warning appears are orange
 .warning {
-  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
+	.buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
 }
 // Danger and error appear as red
 .danger {
-  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+	.buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
 }
 // Success appears as green
 .success {
-  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+	.buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
 }
 // Info appears as a neutral blue
 .info {
-  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
+	.buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
 }
 // Inverse appears as dark gray
 .inverse {
-  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+	.buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
 }
 
 
@@ -169,27 +169,27 @@
 button.btn,
 input[type="submit"].btn {
 
-  // Firefox 3.6 only I believe
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
+	// Firefox 3.6 only I believe
+	&::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
 
-  // IE7 has some default padding on button controls
-  *padding-top: 2px;
-  *padding-bottom: 2px;
-  &.btn.large {
-    *padding-top: 7px;
-    *padding-bottom: 7px;
-  }
-  &.btn.small {
-    *padding-top: 3px;
-    *padding-bottom: 3px;
-  }
-  &.btn.mini {
-    *padding-top: 1px;
-    *padding-bottom: 1px;
-  }
+	// IE7 has some default padding on button controls
+	*padding-top: 2px;
+	*padding-bottom: 2px;
+	&.btn.large {
+		*padding-top: 7px;
+		*padding-bottom: 7px;
+	}
+	&.btn.small {
+		*padding-top: 3px;
+		*padding-bottom: 3px;
+	}
+	&.btn.mini {
+		*padding-top: 1px;
+		*padding-bottom: 1px;
+	}
 }
 
 // Button style checkboxes and Radio button groups
@@ -197,44 +197,44 @@ input[type="submit"].btn {
 
 .btn-checkbox [type="checkbox"],
 .btn-radio [type="radio"] {
-  display: none;
+	display: none;
 }
 
 .btn-checkbox [type="checkbox"]:checked ~ .btn,
 .btn-radio [type="radio"]:checked ~ .btn {
-  .buttonActive();
+	.buttonActive();
 }
 
 .postCheckboxActive(@color) {
-  background-color: @color;
-  *background-color: darken(@color, 5%);
-  background-color: darken(@color, 10%) e("\9");
-  color: rgba(255,255,255,.75);
+	background-color: @color;
+	*background-color: darken(@color, 5%);
+	background-color: darken(@color, 10%) e("\9");
+	color: rgba(255,255,255,.75);
 }
 
 
 // Set up button colors on active
 .btn-checkbox [type="checkbox"]:checked ~ .btn.primary,
 .btn-radio [type="radio"]:checked ~ .btn.primary {
-  .postCheckboxActive(@btnPrimaryBackgroundHighlight);
+	.postCheckboxActive(@btnPrimaryBackgroundHighlight);
 }
 .btn-checkbox [type="checkbox"]:checked ~ .btn.warning,
 .btn-radio [type="radio"]:checked ~ .btn.warning {
-  .postCheckboxActive(@btnWarningBackgroundHighlight);
+	.postCheckboxActive(@btnWarningBackgroundHighlight);
 }
 .btn-checkbox [type="checkbox"]:checked ~ .btn.danger,
 .btn-radio [type="radio"]:checked ~ .btn.danger {
-  .postCheckboxActive(@btnDangerBackgroundHighlight);
+	.postCheckboxActive(@btnDangerBackgroundHighlight);
 }
 .btn-checkbox [type="checkbox"]:checked ~ .btn.success,
 .btn-radio [type="radio"]:checked ~ .btn.success {
-  .postCheckboxActive(@btnSuccessBackgroundHighlight);
+	.postCheckboxActive(@btnSuccessBackgroundHighlight);
 }
 .btn-checkbox [type="checkbox"]:checked ~ .btn.info,
 .btn-radio [type="radio"]:checked ~ .btn.info {
-  .postCheckboxActive(@btnInfoBackgroundHighlight);
+	.postCheckboxActive(@btnInfoBackgroundHighlight);
 }
 .btn-checkbox [type="checkbox"]:checked ~ .btn.inverse,
 .btn-radio [type="radio"]:checked ~ .btn.inverse {
-  .postCheckboxActive(@btnInverseBackgroundHighlight);
+	.postCheckboxActive(@btnInverseBackgroundHighlight);
 }
